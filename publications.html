@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Seunghun Lee</title>
+<meta name="description" content="Publications of Seunghun Lee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:  #FCFCFA;
+  --ink:    #15171B;
+  --ink-2:  #565C64;
+  --ink-3:  #8B9099;
+  --rule:   #E4E5E0;
+  --accent: #2A5F7F;
+  --rail:   150px;
+  --gap:    32px;
+  --measure: 660px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(42,95,127,.32); }
+a:hover { border-bottom-color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--ink); color: var(--paper);
+  padding: 10px 16px; border: 0; z-index: 10;
+}
+.skip:focus { left: 16px; top: 16px; }
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px 28px;
+  padding: 34px 0 26px;
+  border-bottom: 1px solid var(--rule);
+}
+.wordmark {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.18rem; font-weight: 500; letter-spacing: -.01em;
+  color: var(--ink); border: 0;
+}
+.wordmark:hover { color: var(--accent); }
+.nav { display: flex; gap: 22px; font-size: .9rem; }
+.nav a { color: var(--ink-2); border: 0; padding-bottom: 2px; }
+.nav a:hover { color: var(--accent); }
+.nav a[aria-current="page"] {
+  color: var(--ink); border-bottom: 1.5px solid var(--ink);
+}
+
+/* ---------- page head ---------- */
+
+.pagehead { padding: 52px 0 40px; }
+.pagehead h1 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 400; line-height: 1.05; letter-spacing: -.02em;
+  margin: 0 0 18px;
+}
+.standfirst {
+  max-width: var(--measure);
+  font-size: 1.02rem; color: var(--ink-2); margin: 0;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; }
+.action {
+  display: inline-block; padding: 9px 16px;
+  border: 1px solid var(--ink); border-radius: 3px;
+  color: var(--ink); font-size: .88rem; background: transparent;
+}
+.action:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.onthispage {
+  margin: 30px 0 0; padding-top: 18px; border-top: 1px solid var(--rule);
+  display: flex; flex-wrap: wrap; gap: 6px 20px;
+  font-size: .86rem;
+}
+.onthispage a { color: var(--ink-2); border: 0; }
+.onthispage a:hover { color: var(--accent); }
+
+/* ---------- sections ---------- */
+
+.section { padding: 44px 0 8px; }
+.section > h2 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.5rem; font-weight: 500; letter-spacing: -.01em;
+  margin: 0 0 26px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: var(--rail) 1fr;
+  gap: 0 var(--gap);
+  padding: 0 0 30px;
+}
+.when {
+  font-size: .82rem; color: var(--ink-3);
+  padding-top: .3em; line-height: 1.45;
+}
+.entry h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.16rem; font-weight: 500; line-height: 1.3;
+  margin: 0 0 4px; letter-spacing: -.005em;
+}
+.org { margin: 0; color: var(--ink-2); font-size: .95rem; }
+.org .sub { display: block; color: var(--ink-3); font-size: .89rem; }
+
+.what ul { margin: 12px 0 0; padding-left: 0; list-style: none; max-width: var(--measure); }
+.what ul li {
+  position: relative; padding-left: 16px; margin-bottom: 6px;
+  font-size: .94rem; color: var(--ink-2);
+}
+.what ul li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: 5px; height: 1px; background: var(--ink-3);
+}
+
+.subhead {
+  font-size: .82rem; color: var(--ink-3);
+  margin: 20px 0 10px; font-weight: 500;
+}
+.projects { margin: 0; padding: 0; list-style: none; max-width: var(--measure); }
+.projects li { margin-bottom: 14px; font-size: .94rem; color: var(--ink-2); line-height: 1.55; }
+.projects .pname { color: var(--ink); font-weight: 600; }
+.projects .pmeta { color: var(--ink-3); }
+
+/* ---------- publications ---------- */
+
+.pubs { margin: 0; padding: 0; list-style: none; }
+.pub { display: grid; grid-template-columns: var(--rail) 1fr; gap: 0 var(--gap); padding-bottom: 26px; }
+.pub .tag { font-size: .82rem; color: var(--ink-3); padding-top: .3em; }
+.pub h3 {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.1rem; font-weight: 500; line-height: 1.35; margin: 0 0 5px;
+}
+.authors { margin: 0 0 3px; font-size: .92rem; color: var(--ink-2); max-width: var(--measure); }
+.authors .me { color: var(--ink); font-weight: 600; }
+.venue { margin: 0; font-size: .9rem; color: var(--ink-3); }
+.venue .honor { color: var(--accent); }
+.links { margin: 7px 0 0; font-size: .85rem; display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* pub sub-labels */
+.sublabel {
+  font-size: .82rem; color: var(--ink-3); font-weight: 500;
+  margin: 0 0 14px;
+}
+.sublabel.divider {
+  margin-top: 6px; padding-top: 22px;
+  border-top: 1px solid var(--rule);
+}
+
+/* ---------- plain lists ---------- */
+
+.plain { margin: 0; padding: 0; list-style: none; max-width: var(--measure); }
+.plain li {
+  position: relative; padding-left: 16px; margin-bottom: 7px;
+  font-size: .95rem; color: var(--ink-2);
+}
+.plain li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: 5px; height: 1px; background: var(--ink-3);
+}
+
+/* ---------- todo flag ---------- */
+
+.todo {
+  background: #FFF3CD; color: #6B5200;
+  padding: 1px 6px; border-radius: 2px;
+  font-size: .82rem; white-space: nowrap;
+}
+
+/* ---------- about ---------- */
+
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 18px; }
+.contact { display: grid; grid-template-columns: var(--rail) 1fr; gap: 8px var(--gap); font-size: .95rem; }
+.contact dt { color: var(--ink-3); font-size: .85rem; padding-top: .15em; }
+.contact dd { margin: 0; color: var(--ink-2); }
+
+/* ---------- footer ---------- */
+
+.foot {
+  margin-top: 64px; padding: 26px 0 48px;
+  border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px;
+  font-size: .86rem; color: var(--ink-3);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 720px) {
+  .entry, .pub, .contact { grid-template-columns: 1fr; gap: 0; }
+  .when, .pub .tag { padding-top: 0; margin-bottom: 6px; }
+  .contact dt { margin-top: 12px; }
+  .pagehead { padding: 38px 0 28px; }
+}
+
+@media print {
+  body { background: #fff; font-size: 10.5pt; }
+  .masthead, .actions, .onthispage, .skip, .foot { display: none; }
+  .section { padding-top: 18px; page-break-inside: avoid; }
+  a { color: inherit; border: 0; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="masthead">
+    <a class="wordmark" href="index.html">Seunghun Lee</a>
+    <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="pagehead">
+      <h1>Publications</h1>
+      <p class="standfirst">Asterisks mark equal contribution. See also
+        <a href="https://scholar.google.com/citations?user=LPuuGcAAAAAJ">Google Scholar</a>.</p>
+    </div>
+
+    <section class="section">
+      <h2>Publications</h2>
+      <p class="sublabel">Under review</p>
+      <ul class="pubs">
+      <li class="pub">
+        <div class="tag">2027</div>
+        <div class="what">
+          <h3>Climatology-Based Residual Correction with Neural Fields for Continuous Weather Downscaling</h3>
+          <p class="authors"><span class="me">Seunghun Lee</span>, Sihyeon Kim, Injae Kim, Minseo Yoon, Hyunwoo J. Kim</p>
+          <p class="venue">AAAI Conference on Artificial Intelligence (AAAI), 2027. Under review.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2026</div>
+        <div class="what">
+          <h3>Learning to Solve Generative ODEs Beyond the Linear Span</h3>
+          <p class="authors">Sihyeon Kim, <span class="me">Seunghun Lee</span>, Vikas Singh, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2026. Under review.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2606.08672">arXiv</a></p>
+        </div>
+      </li>
+      </ul>
+      <p class="sublabel divider">Conference papers</p>
+      <ul class="pubs">
+      <li class="pub">
+        <div class="tag">2025</div>
+        <div class="what">
+          <h3>PRESTO: Preimage-Informed Instruction Optimization for Prompting Black-Box LLMs</h3>
+          <p class="authors">Jaewon Chu, <span class="me">Seunghun Lee</span>, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2025.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2025</div>
+        <div class="what">
+          <h3>Latent Bayesian Optimization via Autoregressive Normalizing Flows</h3>
+          <p class="authors"><span class="me">Seunghun Lee</span>, Jinyoung Park, Jaewon Chu, Minseo Yoon, Hyunwoo J. Kim</p>
+          <p class="venue">International Conference on Learning Representations (ICLR), 2025. <span class="honor">Oral presentation, top 1.8% of submissions.</span></p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2024</div>
+        <div class="what">
+          <h3>Inversion-based Latent Bayesian Optimization</h3>
+          <p class="authors">Jaewon Chu*, Jinyoung Park*, <span class="me">Seunghun Lee</span>, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2024.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2023</div>
+        <div class="what">
+          <h3>Advancing Bayesian Optimization via Learning Correlated Latent Space</h3>
+          <p class="authors"><span class="me">Seunghun Lee*</span>, Jaewon Chu*, Sihyeon Kim*, Juyeon Ko, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2023.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2023</div>
+        <div class="what">
+          <h3>NuTrea: Neural Tree Search for Context-guided Multi-hop KGQA</h3>
+          <p class="authors">Hyeong Kyu Choi, <span class="me">Seunghun Lee</span>, Jaewon Chu, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2023.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2021</div>
+        <div class="what">
+          <h3>Metropolis-Hastings Data Augmentation for Graph Neural Networks</h3>
+          <p class="authors">Hyeonjin Park*, <span class="me">Seunghun Lee*</span>, Sihyeon Kim, Jinyoung Park, Jisu Jeong, Kyung-Min Kim, Jung-Woo Ha, Hyunwoo J. Kim</p>
+          <p class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2021.</p>
+          
+        </div>
+      </li>
+      </ul>
+      <p class="sublabel divider">Journal papers</p>
+      <ul class="pubs">
+      <li class="pub">
+        <div class="tag">2022</div>
+        <div class="what">
+          <h3>Graph Transformer Networks: Learning Meta-path Graphs to Improve GNNs</h3>
+          <p class="authors">Seongjun Yun, Minbyul Jeong, Sungdong Yoo, <span class="me">Seunghun Lee</span>, Sean S. Yi, Raehyun Kim, Jaewoo Kang, Hyunwoo J. Kim</p>
+          <p class="venue">Neural Networks, 2022.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2021</div>
+        <div class="what">
+          <h3>Learning Augmentation for GNNs with Consistency Regularization</h3>
+          <p class="authors">Hyeonjin Park*, <span class="me">Seunghun Lee*</span>, Dasol Hwang, Jisu Jeong, Kyung-Min Kim, Jung-Woo Ha, Hyunwoo J. Kim</p>
+          <p class="venue">IEEE Access, 2021.</p>
+          
+        </div>
+      </li>
+      <li class="pub">
+        <div class="tag">2021</div>
+        <div class="what">
+          <h3>Hyperbolic Graph Transformer Networks for non-Euclidean Data Analysis on Heterogeneous Graph</h3>
+          <p class="authors"><span class="me">Seunghun Lee</span>, Hyeonjin Park, Hyunwoo J. Kim</p>
+          <p class="venue">Journal of KIISE, 2021.</p>
+          
+        </div>
+      </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <span>&copy; 2026 Seunghun Lee</span>
+    <a href="mailto:llsshh319@kaist.ac.kr">llsshh319 [at] kaist [dot] ac [dot] kr</a>
+  </footer>
+</div>
+</body>
+</html>
