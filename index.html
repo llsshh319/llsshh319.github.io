@@ -254,38 +254,22 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
     <section class="section">
       <h2>Research</h2>
       <div class="prose">
-        <p>I work on machine learning for the sciences. The domains I have worked in
-        look unrelated on paper: the atmosphere, language models, ceramic
-        manufacturing, molecules, road networks. But the problem underneath has
-        been the same each time. Scientific data rarely arrives in the form a model
-        wants, and most of the work is finding a representation in which the problem
-        becomes tractable.</p>
+        <p>I work on machine learning for the sciences. Scientific data rarely arrives
+        in the form a model wants, and most of the work is finding a representation in
+        which the problem becomes tractable. That question has followed me across
+        every domain I have worked in.</p>
 
-        <p>At KAIST I work on weather and climate. The atmosphere is a continuous
-        field, but we only ever see it through station readings, radar sweeps,
-        satellite images, and reanalysis grids, each at a different resolution and in a
-        different format. I represent the field implicitly, as a neural function of
-        space and time, so that heterogeneous observations can be fused and the forecast
-        can be queried at any resolution. This is the basis of the regional downscaling
-        and generative dynamics models I lead in CLIMECAST, aimed at kilometer-scale
-        forecasting over the Korean Peninsula.</p>
+        <p>At KAIST I work on weather and climate. Observations of the atmosphere come
+        in many kinds and resolutions, and I build models that fuse them into
+        high-resolution regional forecasts. I lead a project on kilometer-scale
+        extreme-weather prediction over the Korean Peninsula.</p>
 
-        <p>I came to this from optimization. Many scientific problems reduce to searching
-        an enormous discrete space for inputs that score well on an expensive objective,
-        such as a molecule with the right binding affinity or a process setting that
-        yields a better ceramic. Bayesian optimization handles expensive objectives but not
-        discrete spaces, so the approach is to learn a continuous latent space and
-        search there. That only works if the latent space is faithful to the objective,
-        and my Ph.D. developed methods that shape it for exactly this: regularizing it so
-        that distance tracks objective value, inverting the decoder so that the search
-        stays where the model is reliable, and using normalizing flows so that proposals
-        remain valid. The same machinery turned out to optimize prompts for black-box
-        language models, which was a useful reminder that the method was never about
-        molecules.</p>
-
-        <p>Before that I worked on graph neural networks, mostly data augmentation,
-        meta-path learning on heterogeneous graphs, and hyperbolic embeddings. That is
-        where I first learned that the representation is usually the problem.</p>
+        <p>My Ph.D. was on Bayesian optimization in learned latent spaces. The problem is
+        searching an enormous discrete space for inputs that score well on an expensive
+        objective, such as a molecule with the right binding affinity or a set of
+        ceramic process parameters that yields a better material. The same methods
+        later turned out to optimize prompts for black-box language models. Before that
+        I worked on graph neural networks.</p>
 
         <p>The domain will probably change again. The question of what space to work in
         will not.</p>
@@ -296,7 +280,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
       <h2>Contact</h2>
       <dl class="contact">
         <dt>Email</dt>
-        <dd><a href="mailto:llsshh319@kaist.ac.kr">llsshh319 [at] kaist [dot] ac [dot] kr</a></dd>
+        <dd><a href="mailto:llsshh319@kaist.ac.kr">llsshh319@kaist.ac.kr</a></dd>
         <dt>Scholar</dt>
         <dd><a href="https://scholar.google.com/citations?user=LPuuGcAAAAAJ">Google Scholar</a></dd>
         <dt>OpenReview</dt>
@@ -308,7 +292,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 
   <footer class="foot">
     <span>&copy; 2026 Seunghun Lee</span>
-    <a href="mailto:llsshh319@kaist.ac.kr">llsshh319 [at] kaist [dot] ac [dot] kr</a>
+    <a href="mailto:llsshh319@kaist.ac.kr">llsshh319@kaist.ac.kr</a>
   </footer>
 </div>
 </body>
